@@ -201,7 +201,7 @@
         async function queryAI() {
             const prompt = document.getElementById('ai-prompt').value;
             status.innerText = "Consulting Gemini AI...";
-            const apiKey = "AQ.Ab8RN6LQGIyFuXVxCAEWH8FktIFD5ySTHVfxZJuqyay0jV9CoA"; // API Key provided by runtime environment
+            const apiKey = ""; // API Key provided by runtime environment
             
             try {
                 const systemPrompt = "You are a pattern generator AI. User will describe a pattern and/or colors. Return JSON configuring the generator.\nalgo: 'lcg' (gradients/stripes), 'xor' (mazes/digital/symmetrical), 'mult' (chaotic curves).\ncolorPalette: 'generated' (default/rainbow), 'warm' (fire/sun), 'cold' (ice/water), 'set' (custom specific colors).\na and c: Integers. Small (1-50) for smooth gradients/bands. Medium (100-500) for tight stripes. Large (1000+) for dense/chaotic patterns.\nseed: Random integer.\ngridSize: Choose one of 16, 32, 64, 128 based on requested detail level.";
