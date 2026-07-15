@@ -296,15 +296,14 @@
         // Replace regen listener
         const newRegenBtn = regenBtn.cloneNode(true);
         regenBtn.parentNode.replaceChild(newRegenBtn, regenBtn);
-        newRegenBtn.addEventListener('click', () => {
-            // Give a new random seed on manual regen
-            document.getElementById('seed').value = Math.floor(Math.random() * 100000);
-            generate();
-        });
+        newRegenBtn.addEventListener('click', generate);
 
         // Listen for standard changes to regenerate immediately
         document.getElementById('grid-size').addEventListener('change', generate);
         document.getElementById('algo').addEventListener('change', generate);
+        document.getElementById('a').addEventListener('input', generate);
+        document.getElementById('c').addEventListener('input', generate);
+        document.getElementById('seed').addEventListener('input', generate);
         
         generate();
     </script>
